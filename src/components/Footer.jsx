@@ -44,7 +44,7 @@ export default function Footer({ nav }) {
           <a href={TEL_LINK} dir="ltr" style={{ display: 'block', fontFamily: 'Assistant,sans-serif', fontSize: 16, color: '#0E3A4F', textDecoration: 'none', marginBottom: 10 }}>{PHONE}</a>
           <div style={{ display: 'flex', gap: 10, marginTop: 6 }}>
             <Hover as="a" href={WA_LINK} target="_blank" rel="noopener" aria-label="וואטסאפ"
-              b="width:40px;height:40px;border-radius:11px;background:#E7F9EF;display:flex;align-items:center;justify-content:center;text-decoration:none" h="background:#25D366">
+              b="width:40px;height:40px;border-radius:11px;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 12px rgba(37,211,102,.35)" h="background:#1FB855">
               <WhatsApp s={20} />
             </Hover>
             <Hover as="a" href={`mailto:${EMAIL}`} aria-label="אימייל"
