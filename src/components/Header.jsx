@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Hover } from '../ui.jsx';
 import { WhatsApp, Phone, Hamburger } from '../icons.jsx';
-import { NAV_ITEMS, WA_LINK, TEL_LINK } from '../data.js';
+import { NAV_ITEMS, WA_LINK, TEL_LINK, PHONE } from '../data.js';
 import Logo from './Logo.jsx';
 
 export default function Header({ page, nav, scrolled, isMobile }) {
@@ -38,9 +38,17 @@ export default function Header({ page, nav, scrolled, isMobile }) {
         <Logo onClick={() => go('home')} />
 
         {!isMobile && (
-          <nav style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
+          <nav aria-label="תפריט ראשי" style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
             {NAV_ITEMS.map((it) => (
-              <a key={it.id} onClick={() => go(it.id)} style={navStyle(it.id)}>{it.label}</a>
+              <a
+                key={it.id}
+                href={`#${it.id}`}
+                onClick={(e) => { e.preventDefault(); go(it.id); }}
+                aria-current={page === it.id ? 'page' : undefined}
+                style={navStyle(it.id)}
+              >
+                {it.label}
+              </a>
             ))}
           </nav>
         )}
@@ -55,10 +63,10 @@ export default function Header({ page, nav, scrolled, isMobile }) {
           )}
           {isMobile && (
             <>
-              <a href={TEL_LINK} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42, background: '#1689C4', color: '#fff', borderRadius: 11, textDecoration: 'none' }}>
+              <a href={TEL_LINK} aria-label={`חיוג ל-${PHONE}`} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42, background: '#1689C4', color: '#fff', borderRadius: 11, textDecoration: 'none' }}>
                 <Phone s={19} />
               </a>
-              <button onClick={() => setMenuOpen((v) => !v)} aria-label="תפריט" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42, background: '#EEF7FC', border: '1px solid #D9E8F0', borderRadius: 11, cursor: 'pointer' }}>
+              <button type="button" onClick={() => setMenuOpen((v) => !v)} aria-label="תפריט" aria-expanded={menuOpen} aria-controls="mobile-nav" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42, background: '#EEF7FC', border: '1px solid #D9E8F0', borderRadius: 11, cursor: 'pointer' }}>
                 <Hamburger />
               </button>
             </>
@@ -67,10 +75,15 @@ export default function Header({ page, nav, scrolled, isMobile }) {
       </div>
 
       {isMobile && menuOpen && (
-        <nav style={{ background: '#fff', borderTop: '1px solid #EAF1F5', padding: '8px 22px 16px', display: 'flex', flexDirection: 'column', animation: 'fadeIn .2s ease both' }}>
+        <nav id="mobile-nav" aria-label="תפריט ראשי" style={{ background: '#fff', borderTop: '1px solid #EAF1F5', padding: '8px 22px 16px', display: 'flex', flexDirection: 'column', animation: 'fadeIn .2s ease both' }}>
           {NAV_ITEMS.map((it, i) => (
-            <a key={it.id} onClick={() => go(it.id)}
-              style={{ padding: '13px 4px', fontFamily: 'Heebo,sans-serif', fontWeight: 600, fontSize: 17, color: '#0E3A4F', textDecoration: 'none', borderBottom: i < NAV_ITEMS.length - 1 ? '1px solid #F0F5F8' : 'none', cursor: 'pointer' }}>
+            <a
+              key={it.id}
+              href={`#${it.id}`}
+              onClick={(e) => { e.preventDefault(); go(it.id); }}
+              aria-current={page === it.id ? 'page' : undefined}
+              style={{ padding: '13px 4px', fontFamily: 'Heebo,sans-serif', fontWeight: 600, fontSize: 17, color: '#0E3A4F', textDecoration: 'none', borderBottom: i < NAV_ITEMS.length - 1 ? '1px solid #F0F5F8' : 'none', cursor: 'pointer' }}
+            >
               {it.label}
             </a>
           ))}

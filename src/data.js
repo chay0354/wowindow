@@ -1,11 +1,14 @@
 // Shared business data + contact info for the wowindow site.
 
-export const PHONE = '050-000-0000';
-export const TEL_LINK = 'tel:+972500000000';
-export const EMAIL = 'info@wowindow.co.il';
+export const PHONE = '050-504-0061';
+export const TEL_LINK = 'tel:+972505040061';
+export const EMAIL = 'office@wowindow.com';
 export const WA_LINK =
-  'https://wa.me/972500000000?text=' +
+  'https://wa.me/972505040061?text=' +
   encodeURIComponent('היי, אשמח לקבל פרטים לגבי ניקוי באוסמוזה הפוכה');
+
+export const ACCESSIBILITY_COORDINATOR = 'wowindow';
+export const ACCESSIBILITY_LAST_UPDATED = '29 ביוני 2026';
 
 export const TESTIMONIALS = [
   { name: `משפחת לוי`, role: `וילה בהרצליה פיתוח`, initial: `ל`, text: `החלונות הענקיים בסלון נראים כאילו אין בכלל זכוכית. עבודה נקייה, מקצועית וללא טיפת בלגן. ממליצים בחום!` },

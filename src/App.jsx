@@ -8,6 +8,7 @@ import Buildings from './pages/Buildings.jsx';
 import Tech from './pages/Tech.jsx';
 import Gallery from './pages/Gallery.jsx';
 import Contact from './pages/Contact.jsx';
+import Accessibility from './pages/Accessibility.jsx';
 
 export default function App() {
   const [page, setPage] = useState('home');
@@ -39,12 +40,14 @@ export default function App() {
     tech: <Tech nav={nav} />,
     gallery: <Gallery nav={nav} />,
     contact: <Contact nav={nav} />,
+    accessibility: <Accessibility />,
   };
 
   return (
     <>
+      <a href="#main-content" className="skip-link">דילוג לתוכן הראשי</a>
       <Header page={page} nav={nav} scrolled={scrolled} isMobile={isMobile} />
-      <main key={page} style={{ animation: 'fadeIn .4s ease both' }}>
+      <main id="main-content" key={page} style={{ animation: 'fadeIn .4s ease both' }}>
         {pages[page]}
       </main>
       <Footer nav={nav} />

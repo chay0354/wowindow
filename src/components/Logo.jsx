@@ -3,7 +3,9 @@ import React from 'react';
 export default function Logo({ onClick, height = 34 }) {
   return (
     <a
-      onClick={onClick}
+      href="#home"
+      onClick={(e) => { e.preventDefault(); onClick?.(); }}
+      aria-label="wowindow — חזרה לדף הבית"
       style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', textDecoration: 'none' }}
     >
       <img

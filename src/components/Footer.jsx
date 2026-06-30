@@ -57,7 +57,7 @@ export default function Footer({ nav }) {
 
       <div style={{ maxWidth: 1200, margin: '32px auto 0', paddingTop: 22, borderTop: '1px solid #D9E8F0', display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center' }}>
         <span style={{ fontFamily: 'Assistant,sans-serif', fontSize: 14, color: '#6B8490' }}>© wowindow · כל הזכויות שמורות</span>
-        <a onClick={() => nav('contact')} style={{ fontFamily: 'Assistant,sans-serif', fontSize: 14, color: '#6B8490', textDecoration: 'underline', cursor: 'pointer' }}>הצהרת נגישות</a>
+        <a onClick={() => nav('accessibility')} style={{ fontFamily: 'Assistant,sans-serif', fontSize: 14, color: '#6B8490', textDecoration: 'underline', cursor: 'pointer' }}>הצהרת נגישות</a>
       </div>
     </footer>
   );
