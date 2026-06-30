@@ -137,17 +137,17 @@ export default function AccessibilityWidget({ nav }) {
           width: 56,
           height: 56,
           borderRadius: '50%',
-          border: 'none',
-          background: '#1689C4',
+          border: '2px solid #fff',
+          background: '#0066B3',
           color: '#fff',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           cursor: 'pointer',
-          boxShadow: '0 8px 22px rgba(22,137,196,.4)',
+          boxShadow: '0 8px 22px rgba(0,102,179,.45)',
         }}
       >
-        <AccessibilityIcon s={28} />
+        <AccessibilityIcon s={30} />
       </button>
     </div>
   );
