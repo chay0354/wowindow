@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { AccessibilityIcon } from '../icons.jsx';
 
 const STORAGE_KEY = 'wowindow-a11y';
 
@@ -147,7 +146,14 @@ export default function AccessibilityWidget({ nav }) {
           boxShadow: '0 8px 22px rgba(0,102,179,.45)',
         }}
       >
-        <AccessibilityIcon s={30} />
+        <img
+          src="/images/accessibility-icon.svg"
+          alt=""
+          width={32}
+          height={32}
+          aria-hidden="true"
+          style={{ display: 'block' }}
+        />
       </button>
     </div>
   );

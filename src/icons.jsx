@@ -142,9 +142,3 @@ export const Play = ({ s = 13, c = '#fff' }) => (
     <path d="M8 5v14l11-7z" />
   </svg>
 );
-
-export const AccessibilityIcon = ({ s = 28, c = '#fff' }) => (
-  <svg width={s} height={s} viewBox="0 0 24 24" fill={c} aria-hidden="true">
-    <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v3h3v7h-2v-5h-2.5c-.83 0-1.5.67-1.5 1.5v4.74c0 2.33 1.89 4.22 4.22 4.22.93 0 1.76-.3 2.44-.82l1.12 1.88C15.98 21.03 14.06 22 12 22c-2.76 0-5-2.24-5-5v-6H5v-2h6V9h2V7h4v2z" />
-  </svg>
-);
