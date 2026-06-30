@@ -1,7 +1,7 @@
 import React from 'react';
 import { Hover, Img } from '../ui.jsx';
 import { WhatsApp, Phone, Mail, Pin, Clock, Check, Invoice, ShieldKeep } from '../icons.jsx';
-import { PHONE, EMAIL, TEL_LINK, WA_LINK } from '../data.js';
+import { PHONE, EMAIL, TEL_LINK, WA_LINK, ACTIVITY_AREAS } from '../data.js';
 
 const INCLUDED = [
   `ניקוי חלונות ויטרינה בלובי כניסה (כולל גבהים)`,
@@ -82,7 +82,7 @@ export default function Buildings() {
             </Hover>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '8px 22px', marginTop: 22, color: 'rgba(255,255,255,.75)', fontFamily: 'Assistant,sans-serif', fontSize: 15 }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}><Pin s={18} c="#34B3E8" />גוש דן, השרון והמרכז</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}><Pin s={18} c="#34B3E8" />{ACTIVITY_AREAS}</span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}><Clock s={18} c="#34B3E8" />א'–ה' 08:00–18:00 · ו' 08:00–13:00</span>
           </div>
         </div>

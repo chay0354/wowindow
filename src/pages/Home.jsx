@@ -5,7 +5,7 @@ import {
   WhatsApp, Phone, Mail, Pin, Clock, ShieldCheck, Invoice, Star,
   Drop, Sun, ShieldKeep, ArrowLeft, ChevronRight, ChevronLeft,
 } from '../icons.jsx';
-import { TESTIMONIALS, PHONE, EMAIL, TEL_LINK, WA_LINK } from '../data.js';
+import { TESTIMONIALS, PHONE, EMAIL, TEL_LINK, WA_LINK, ACTIVITY_AREAS } from '../data.js';
 
 const eyebrow = { fontFamily: 'Heebo,sans-serif', fontWeight: 700, fontSize: 14, letterSpacing: '.05em', color: '#1689C4', marginBottom: 10 };
 const h2 = { fontFamily: 'Heebo,sans-serif', fontWeight: 800, fontSize: 'clamp(27px,3.6vw,42px)', color: '#0E3A4F' };
@@ -211,7 +211,7 @@ function ContactCards() {
         </Hover>
         <div style={{ display: 'flex', gap: 15, alignItems: 'center', background: '#fff', border: '1px solid #EAF1F5', borderRadius: 18, padding: 24, boxShadow: '0 8px 24px rgba(14,58,79,.06)' }}>
           <span style={{ ...ico, background: '#EAF6FB' }}><Pin s={23} /></span>
-          <span><span style={title}>אזורי פעילות</span><span style={sub}>גוש דן, השרון והמרכז</span></span>
+          <span><span style={title}>אזורי פעילות</span><span style={sub}>{ACTIVITY_AREAS}</span></span>
         </div>
       </Reveal>
 

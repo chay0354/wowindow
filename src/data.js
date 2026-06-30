@@ -10,6 +10,9 @@ export const WA_LINK =
 export const ACCESSIBILITY_COORDINATOR = 'wowindow';
 export const ACCESSIBILITY_LAST_UPDATED = '29 ביוני 2026';
 
+export const ACTIVITY_AREAS = 'גוש דן, השרון, המרכז וירושלים והסביבה';
+export const ACTIVITY_AREAS_DOTS = 'גוש דן · השרון · המרכז · ירושלים והסביבה';
+
 export const TESTIMONIALS = [
   { name: `משפחת לוי`, role: `וילה בהרצליה פיתוח`, initial: `ל`, text: `החלונות הענקיים בסלון נראים כאילו אין בכלל זכוכית. עבודה נקייה, מקצועית וללא טיפת בלגן. ממליצים בחום!` },
   { name: `דנה — ועד הבית`, role: `בניין מגורים, רמת השרון`, initial: `ד`, text: `הלובי וחזית הזכוכית פשוט זוהרים. הגיעו בזמן, עם חשבונית מסודרת, וללא שלוליות סבון בכניסה. שירות מעולה.` },

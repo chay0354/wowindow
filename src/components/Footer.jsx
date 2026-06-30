@@ -1,7 +1,7 @@
 import React from 'react';
 import { Hover } from '../ui.jsx';
 import { WhatsApp, Mail } from '../icons.jsx';
-import { PHONE, TEL_LINK, EMAIL, WA_LINK } from '../data.js';
+import { PHONE, TEL_LINK, EMAIL, WA_LINK, ACTIVITY_AREAS_DOTS } from '../data.js';
 import Logo from './Logo.jsx';
 
 export default function Footer({ nav }) {
@@ -24,7 +24,7 @@ export default function Footer({ nav }) {
 
         <div>
           <h4 style={h4}>אזורי פעילות</h4>
-          <p style={{ fontFamily: 'Assistant,sans-serif', fontSize: 15, lineHeight: 1.9, color: '#4A6572' }}>גוש דן · השרון · המרכז</p>
+          <p style={{ fontFamily: 'Assistant,sans-serif', fontSize: 15, lineHeight: 1.9, color: '#4A6572' }}>{ACTIVITY_AREAS_DOTS}</p>
           <h4 style={{ ...h4, margin: '18px 0 10px' }}>שעות פעילות</h4>
           <p style={{ fontFamily: 'Assistant,sans-serif', fontSize: 15, lineHeight: 1.7, color: '#4A6572' }}>א'–ה' 08:00–18:00<br />ו' 08:00–13:00</p>
         </div>

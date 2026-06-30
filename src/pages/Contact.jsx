@@ -1,7 +1,7 @@
 import React from 'react';
 import { Hover } from '../ui.jsx';
 import { WhatsApp, Phone, Mail, Pin, Clock } from '../icons.jsx';
-import { PHONE, EMAIL, TEL_LINK, WA_LINK } from '../data.js';
+import { PHONE, EMAIL, TEL_LINK, WA_LINK, ACTIVITY_AREAS } from '../data.js';
 
 function DetailRow({ icon, title, value, href, target, dir }) {
   const inner = (
@@ -33,7 +33,7 @@ export default function Contact() {
             <DetailRow icon={<Phone s={22} c="#1689C4" />} title="טלפון ישיר" value={PHONE} href={TEL_LINK} dir="ltr" />
             <DetailRow icon={<WhatsApp s={22} c="#25D366" />} title="וואטסאפ לעסקים" value="צ'אט עם הודעה מוכנה" href={WA_LINK} target="_blank" />
             <DetailRow icon={<Mail s={22} />} title="אימייל" value={EMAIL} href={`mailto:${EMAIL}`} dir="ltr" />
-            <DetailRow icon={<Pin s={22} />} title="אזורי פעילות" value="גוש דן, השרון והמרכז" />
+            <DetailRow icon={<Pin s={22} />} title="אזורי פעילות" value={ACTIVITY_AREAS} />
             <DetailRow icon={<Clock s={22} />} title="שעות פעילות" value="א'–ה' 08:00–18:00 · ו' 08:00–13:00" />
           </div>
 

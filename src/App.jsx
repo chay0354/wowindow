@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import FloatingWhatsApp from './components/FloatingWhatsApp.jsx';
+import AccessibilityWidget from './components/AccessibilityWidget.jsx';
 import Home from './pages/Home.jsx';
 import Private from './pages/Private.jsx';
 import Buildings from './pages/Buildings.jsx';
@@ -52,6 +53,7 @@ export default function App() {
       </main>
       <Footer nav={nav} />
       <FloatingWhatsApp />
+      <AccessibilityWidget nav={nav} />
     </>
   );
 }
